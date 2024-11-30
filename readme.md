@@ -6,4 +6,3 @@ javac puzzle/*.java
 # run
 java puzzle.Main
 ```
-# GrundlagenKI_praktische-bung1
