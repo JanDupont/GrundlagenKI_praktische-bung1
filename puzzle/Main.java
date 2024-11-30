@@ -40,13 +40,17 @@ public class Main {
 		// Puzzle example = new Puzzle(0, 1, 2, 3, 4, 5, 6, 7, 8);
 		// Summary summary = PuzzleSolver.AStar(example, PuzzleSolver.Heuristic.MANHATTAN, false, 0, 0);
 
+		Puzzle exampleInstant = new Puzzle(1,2,3,8,0,4,7,6,5);
+		Summary summaryInstant = PuzzleSolver.AStar(exampleInstant, PuzzleSolver.Heuristic.MANHATTAN, false, 0, 0);
+		System.out.println(summaryInstant);
+
 		// DLUR
-		// Puzzle example3 =  new Puzzle(1,2,3,7,0,4,6,8,5);
-		// Summary summary3 = PuzzleSolver.greedy(example3, PuzzleSolver.Heuristic.MANHATTAN, false, 0, 0);
-		// System.out.println(summary3);
-		// Puzzle example4 =  new Puzzle(1,2,3,7,0,4,6,8,5);
-		// Summary summary4 = PuzzleSolver.AStar(example4, PuzzleSolver.Heuristic.MANHATTAN, false, 0, 0);
-		// System.out.println(summary4);
+		Puzzle example_DLUR_greedy =  new Puzzle(1,2,3,7,0,4,6,8,5);
+		Summary summary_DLUR_greedy = PuzzleSolver.greedy(example_DLUR_greedy, PuzzleSolver.Heuristic.MANHATTAN, false, 0, 0);
+		System.out.println(summary_DLUR_greedy);
+		Puzzle example_DLUR_AStar =  new Puzzle(1,2,3,7,0,4,6,8,5);
+		Summary summary_DLUR_AStar = PuzzleSolver.AStar(example_DLUR_AStar, PuzzleSolver.Heuristic.MANHATTAN, false, 0, 0);
+		System.out.println(summary_DLUR_AStar);
 
 		Puzzle example3 =  new Puzzle(2,7,1,6,4,3,0,5,8);
 		Summary summary3 = PuzzleSolver.AStar(example3, PuzzleSolver.Heuristic.MANHATTAN, false, 14, 0);
