@@ -1,4 +1,4 @@
-# GrundlagenKI_praktische-bung1
+# GrundlagenKI_praktischeUebung1
 
 ```bash
 # compile
