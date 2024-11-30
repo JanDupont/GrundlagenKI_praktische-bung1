@@ -33,6 +33,7 @@ public class PuzzleSolver {
 		int maxQueueSize = 0;
 		int maxDepthReached = 0;
 
+		Puzzle current = null;
 		while(!queue.isEmpty()){
 			maxQueueSize = Math.max(maxQueueSize, queue.size());
 
@@ -42,7 +43,7 @@ public class PuzzleSolver {
 			}
 
 			// Aktuellen Zustand aus der Queue entfernen
-			Puzzle current = queue.poll();
+			current = queue.poll();
 
 			// Prüfen, ob das Ziel erreicht ist
 			if (current.equals(Puzzle.goal)) {
@@ -92,6 +93,12 @@ public class PuzzleSolver {
 			}
 		}
 
+		if(!summary.isSolution){
+			summary.finalState = current;
+			summary.pathLength = -1;
+			summary.path = null;
+		}
+
 		summary.numExpansions = numExpansions;
 		summary.maxDepthReached = maxDepthReached;
 		summary.queueSize = queue.size();
@@ -124,6 +131,7 @@ public class PuzzleSolver {
 		int maxQueueSize = 0;
 		int maxDepthReached = 0;
 
+		Puzzle current = null;
 		while(!queue.isEmpty()){
 			maxQueueSize = Math.max(maxQueueSize, queue.size());
 
@@ -133,7 +141,7 @@ public class PuzzleSolver {
 			}
 
 			// Aktuellen Zustand aus der Queue entfernen
-			Puzzle current = queue.poll();
+			current = queue.poll();
 
 			// Prüfen, ob das Ziel erreicht ist
 			if (current.equals(Puzzle.goal)) {
@@ -181,6 +189,12 @@ public class PuzzleSolver {
 					}
 				}
 			}
+		}
+
+		if(!summary.isSolution){
+			summary.finalState = current;
+			summary.pathLength = -1;
+			summary.path = null;
 		}
 
 		summary.numExpansions = numExpansions;
