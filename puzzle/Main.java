@@ -39,6 +39,7 @@ public class Main {
 	public static void main(String[] args) {
 		// Puzzle example = new Puzzle(0, 1, 2, 3, 4, 5, 6, 7, 8);
 		// Summary summary = PuzzleSolver.AStar(example, PuzzleSolver.Heuristic.MANHATTAN, false, 0, 0);
+		// System.out.println(summary);
 
 		Puzzle exampleInstant = new Puzzle(1,2,3,8,0,4,7,6,5);
 		Summary summaryInstant = PuzzleSolver.AStar(exampleInstant, PuzzleSolver.Heuristic.MANHATTAN, false, 0, 0);

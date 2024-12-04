@@ -120,7 +120,7 @@ public class PuzzleSolver {
 		// Summary initialisieren
 		Summary summary = new Summary();
 		summary.startState = puzzle;
-		summary.algorithm = "Greedy";
+		summary.algorithm = "A*";
 		summary.heuristic = heuristic;
 		summary.detectDouble = detectDouble;
 		summary.maxDepthPermitted = maxDepth;
